@@ -25,9 +25,12 @@ blueButton.addEventListener('click', function() {
 });
 
 function addElement () {
-      const newDiv = document.createElement ("div");
-      const newContent = document.createTextNode ("How far can you go?");
-      newDiv.appendChild(newContent);
-      const currentDiv = document.getElementById ("div1");
+      var newDiv = document.createElement ("div");
+      newDiv.innerHTML = "<p> How far can you go? </p>"
+      var currentDiv = document.getElementById ("div1");
       document.body.insertBefore(newDiv, currentDiv);
+}
+
+function onLoad(){
+  addElement();
 }
