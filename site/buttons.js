@@ -6,7 +6,13 @@ greenButton.addEventListener('click', function() {
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
   alert('You clicked the red button');
+/*redButton.addEventListener('mousedown', function(){
+    classList.add('light-up-red');
+redButton.addEventListener('mouseup', function(){
+    classList.remove('light-up-red');*/
 });
+
+
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {

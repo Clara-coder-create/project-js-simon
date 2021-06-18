@@ -58,8 +58,23 @@ html {
   background-color: rgb(0, 0, 255);
 }
 
-.light-up:hover{
+.green:active{
   background-color:rgb(136, 255, 112);
   box-shadow: 5px 5px 5px 5px rgb(136, 255, 112);
-  /*box-shadow: 120px 80px 40px 20px rgb(136, 255, 112);/*
+  /*box-shadow: 120px 80px 40px 20px rgb(136, 255, 112);*/
+}
+
+.red:active{
+  background-color: rgb(245, 121, 121);
+  box-shadow: 5px 5px 5px 5px rgb(245, 121, 121);
+}
+
+.yellow:active{
+  background-color: rgb(248, 227, 132);
+  box-shadow: 5px 5px 5px 5px rgb(248, 227, 132);
+}
+
+.blue:active{
+  background-color: rgb(151, 209, 243);
+  box-shadow: 5px 5px 5px 5px rgb(151, 209, 243);
 }
