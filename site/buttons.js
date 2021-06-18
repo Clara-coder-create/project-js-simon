@@ -17,3 +17,11 @@ let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
   alert('You clicked the blue button');
 });
+
+function addElement () {
+      const newDiv = document.createElement ("div");
+      const newContent = document.createTextNode ("How far can you go?");
+      newDiv.appendChild(newContent);
+      const currentDiv = document.getElementById ("div1");
+      document.body.insertBefore(newDiv, currentDiv);
+}
