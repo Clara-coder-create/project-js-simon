@@ -11,11 +11,26 @@
     <section id="content">
       <h1>Simon</h1>
 
+<audio id = "mouse-click" controls src = "Mouse-click.mp3" preload="auto"></audio>
+
       <div class="simon-container">
-        <div class="simon-button green light-up-green"></div>
+        <button id ="green-button" class="simon-button green" onclick="play()">
+
+        <script>
+          function play() {
+            var audio = document.getElementById("mouse-click");
+            audio.play();
+          }
+        </script>
+
+        </button>
+
+
+
+
         <div id ="red-button" class="simon-button red"></div>
-        <div id ="yellow-button" class="simon-button yellow light-up-yellow"></div>
-        <div class="simon-button blue light-up-blue"></div>
+        <div id ="yellow-button" class="simon-button yellow"></div>
+        <div class="simon-button blue"></div>
       </div>
     </section>
     <script
