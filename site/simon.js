@@ -4,17 +4,19 @@
  * @author Emily Greetis
  *
  */
-
+var i = 0; //placeholder for what level the player is on
 function onLoad(){
+  var sequence = [];
   //active('blue');
  // randomColor();
- var sequence = [];
  sequence = colorSequencer();
  activate(sequence, 0);
-
+var updateButton = document.querySelector("button");
+updateButton.addEventListener('click', (event) => {
+update(sequence, i + 1, i);
+i++;
+});
 }
-
-
   /**
    * Calls a random number from
    * 0 to 3
@@ -88,4 +90,37 @@ function activate(colorSequence, idx){
   var color = colorSequence[idx];
   console.log(color);
   active(color);
+}
+
+/**
+ * @param String color name
+ * resets css class of specified color
+ */
+
+ function reset(color){
+  const button = 'simon-button.';
+  var colorButton = button.concat(color); //original class name
+  var colorLit = color.concat('-lit'); //updated class name
+  console.log(colorButton);
+  console.log(colorLit);
+  var currentButton = document.querySelector('.'+color);
+  currentButton.classList.replace(colorLit,colorButton);
+}
+
+/**
+ * @param String[] colorSequence is
+ * pattern of colors created by colorSequencer
+ * @param int idx index of next element in pattern
+ * @param int oldIdx index of element that is currently activated
+ * updates what is currently activated
+ */
+function update(colorSequence, idx, oldIdx){
+  if(idx >= colorSequence.length){
+    return; //implement some kind of you win type thing
+  }
+  var oldColor = colorSequence[oldIdx];
+  reset(oldColor);
+  var newColor = colorSequence[idx];
+  console.log(newColor);
+  activate(colorSequence, idx);
 }
