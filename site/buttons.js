@@ -46,14 +46,3 @@ let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
   alert('You clicked the blue button');
 });
-
-
-function active(color){
-const button = 'simon-button.';
-var colorButton = button.concat(color);
-var colorLit = color.concat('-lit');
-console.log(colorButton);
-console.log(colorLit);
-var currentButton = document.querySelector('.'+color);
-currentButton.classList.add(colorLit);
-}
