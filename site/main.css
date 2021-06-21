@@ -43,19 +43,24 @@ html {
 
 .simon-button.green {
   background-color: #21BA45;
+  border-radius: 200px 10px 10px 10px;
 }
 
 .simon-button.red {
   background-color: #DB2828;
+  border-radius: 10px 200px 10px 10px;
 }
 
 .simon-button.yellow {
   background-color: #FBBD08;
+  border-radius: 10px 10px 10px 200px;
 }
+
 
 
 .simon-button.blue {
   background-color: rgb(0, 0, 255);
+  border-radius: 10px 10px 200px 10px;
 }
 
 .green:active{
