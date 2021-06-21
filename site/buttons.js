@@ -1,9 +1,9 @@
-let greenButton = document.querySelector('.simon-button.green');
+/*let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
   alert('You clicked the green button');
   var onclick: (this: Window, ev: MouseEvent) => document.getElementById('mouse-click').play()
 });
-
+*/
 /* Trying to add sound on click to the green button
 
 var greenButton = document.getElementbyId("green-button");
@@ -47,13 +47,13 @@ blueButton.addEventListener('click', function() {
   alert('You clicked the blue button');
 });
 
-function addElement () {
-      var newDiv = document.createElement ("div");
-      newDiv.innerHTML = "<p> How far can you go? </p>"
-      var currentDiv = document.getElementById ("div1");
-      document.body.insertBefore(newDiv, currentDiv);
-}
 
-function onLoad(){
-  addElement();
+function active(color){
+const button = 'simon-button.';
+var colorButton = button.concat(color);
+var colorLit = color.concat('-lit');
+console.log(colorButton);
+console.log(colorLit);
+var currentButton = document.querySelector('.'+color);
+currentButton.classList.add(colorLit);
 }
