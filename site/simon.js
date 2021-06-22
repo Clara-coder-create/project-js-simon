@@ -5,27 +5,7 @@
  *
  */
 
-<<<<<<< HEAD
-//basic setup stuff
 
-=======
-
-
-
-var i = 0; //placeholder for what level the player is on
-function onLoad(){
-  var sequence = [];
-  //active('blue');
- // randomColor();
- sequence = colorSequencer();
- activate(sequence, 0);
-var updateButton = document.querySelector("button");
-updateButton.addEventListener('click', (event) => {
-update(sequence, i + 1, i);
-i++;
-});
-}
->>>>>>> 3ddb5d190f236469747e0a96ef2a050ac894073b
   /**
    * Calls a random number from
    * 0 to 3
@@ -107,13 +87,15 @@ function activate(colorSequence, idx){
  */
 
  function reset(color){
+  console.log("hello");
   const button = 'simon-button.';
   var colorButton = button.concat(color); //original class name
   var colorLit = color.concat('-lit'); //updated class name
   console.log(colorButton);
   console.log(colorLit);
   var currentButton = document.querySelector('.'+color);
-  currentButton.classList.replace(colorLit,colorButton);
+  var replaced = currentButton.classList.replace(colorLit,colorButton);
+  console.log(replaced);
 }
 
 /**
@@ -129,6 +111,7 @@ function update(colorSequence, idx, oldIdx){
   }
   var oldColor = colorSequence[oldIdx];
   reset(oldColor);
+  console.log(oldColor);
   var newColor = colorSequence[idx];
   console.log(newColor);
   activate(colorSequence, idx);
@@ -184,13 +167,13 @@ function currentButton(){
  */
 function callCurrent(sequence, idx){
   const timer = setInterval(function(){
-    activate(sequence, idx++);
-    clearAll();
-  }, 1000);
-  if (idx >= sequence.length){
-    clearInterval(timer);
+    let temp = idx + 1;
+    if(idx >= temp){
+      clearInterval(timer);
+    } update(sequence, idx, idx-1);
+      idx++;
+   }, 1000);
   }
-}
 
 /////////// gameplay
 
@@ -205,5 +188,7 @@ console.log(clicked);
 function newGame(){
 clearAll();
 sequence = colorSequencer();
-callCurrent(sequence, level);
+for (let i = 0; i <= level; i++){
+  callCurrent(sequence, i);
+}
 }
