@@ -24,6 +24,7 @@ greenButton.addEventListener('click', function() {
   audio.play();
 }*/
 
+<<<<<<< HEAD
 //boolean variables
 var redOn = false;
 var yellowOn = false;
@@ -36,6 +37,15 @@ function reset(){
   greenOn = false;
   blueOn = false;
 }
+=======
+  function noBorder(){
+  var element = document.getElementById("green-button");
+  element.classList.remove("border");
+    }
+
+
+
+>>>>>>> 3ddb5d190f236469747e0a96ef2a050ac894073b
 
 
 

@@ -5,8 +5,27 @@
  *
  */
 
+<<<<<<< HEAD
 //basic setup stuff
 
+=======
+
+
+
+var i = 0; //placeholder for what level the player is on
+function onLoad(){
+  var sequence = [];
+  //active('blue');
+ // randomColor();
+ sequence = colorSequencer();
+ activate(sequence, 0);
+var updateButton = document.querySelector("button");
+updateButton.addEventListener('click', (event) => {
+update(sequence, i + 1, i);
+i++;
+});
+}
+>>>>>>> 3ddb5d190f236469747e0a96ef2a050ac894073b
   /**
    * Calls a random number from
    * 0 to 3

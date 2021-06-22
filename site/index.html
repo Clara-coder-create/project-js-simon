@@ -10,13 +10,26 @@
   <body onload = "onLoad()">
     <section id="content">
       <h1>Simon</h1>
+         <h2>How far can you go?</h2>
 
+
+         <button id = "start-button" onclick="playStart()">start
+          <script>
+           function playStart() {
+            var audio = document.getElementById("game-opener");
+            audio.playStart();
+           }
+          </script>
+         </button>
+
+<<<<<<< HEAD
          <button id = "start">start</button>
+=======
+>>>>>>> 3ddb5d190f236469747e0a96ef2a050ac894073b
 
-<audio id = "mouse-click" controls src = "Mouse-click.mp3" preload="auto"></audio>
 
       <div class="simon-container">
-        <button id ="green-button" class="simon-button green" onclick="play()">
+        <button id ="green-button" class="simon-button green border" onclick="play(); noBorder()">
 <!--this makes the sound play when the button is pressed-->
         <script>
           function play() {
@@ -25,10 +38,32 @@
           }
         </script>
         </button>
-        <div id ="red-button" class="simon-button red"></div>
-        <div id ="yellow-button" class="simon-button yellow"></div>
-        <div class="simon-button blue"></div>
+        <button id ="red-button" class="simon-button red border" onclick="play()">
+          <script>
+            function play() {
+              var audio = document.getElementById("mouse-click");
+              audio.play();
+            }
+          </script>
+        </button>
+        <button id ="yellow-button" class="simon-button yellow border" onclick="play()">
+          <script>
+            function play() {
+              var audio = document.getElementById("mouse-click");
+              audio.play();
+            }
+          </script>
+        </button>
+        <button class="simon-button blue border" onclick="play()">
+          <script>
+            function play() {
+              var audio = document.getElementById("mouse-click");
+              audio.play();
+            }
+          </script>
+        </button>
       </div>
+
     </section>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -37,5 +72,16 @@
     </script>
     <script src="simon.js"></script>
     <script src="buttons.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="style.js"></script>
+
+
+<div class="audio">
+<audio id="game-opener" controls src="Ipsi.mp3" preload="auto"></audio>
+<div>
+<audio id = "mouse-click" controls src = "Mouse-click.mp3" preload="auto"></audio>
+</div>
+>>>>>>> 3ddb5d190f236469747e0a96ef2a050ac894073b
   </body>
 </html>
