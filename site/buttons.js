@@ -1,11 +1,11 @@
 let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
   alert('You clicked the green button');
-
+  var onclick: (this: Window, ev: MouseEvent) => document.getElementById('mouse-click').play()
 });
 
 /* Trying to add sound on click to the green button
-var onclick: (this: Window, ev: MouseEvent) => document.getElementById('mouse-click').play()
+
 var greenButton = document.getElementbyId("green-button");
 greenButton.addEventListener('click',playSound);
 
