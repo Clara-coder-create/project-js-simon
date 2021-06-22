@@ -4,6 +4,10 @@
  * @author Emily Greetis
  *
  */
+
+
+
+
 var i = 0; //placeholder for what level the player is on
 function onLoad(){
   var sequence = [];

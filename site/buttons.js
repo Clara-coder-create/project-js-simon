@@ -24,6 +24,14 @@ greenButton.addEventListener('click', function() {
   audio.play();
 }*/
 
+  function noBorder(){
+  var element = document.getElementById("green-button");
+  element.classList.remove("border");
+    }
+
+
+
+
 
 
 let redButton = document.querySelector('.simon-button.red');

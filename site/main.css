@@ -3,14 +3,17 @@
 
 }
 html {
-  background-color: #FCFCFC;
+  background-color:black;
   font-family: Arial;
   font-size: 18px;
 }
 
+
+
 #content {
   width: 800px;
   margin: 0 auto;
+  color: white;
 }
 
 #content h1 {
@@ -18,16 +21,43 @@ html {
   text-align: center;
 }
 
+h2{
+  text-align: center;
+}
+
 .simon-container {
-  margin: 20px auto;
+  margin: 50px auto;
   width:400px;
   height:400px;
-  background-color:#fff;
+  background-color:black;
   display:grid;
   grid-template-columns: 200px 200px;
   grid-row: auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+}
+
+#start-button{
+  display:block;
+  margin: 0 auto;
+    width:80px;
+    height:80px;
+    line-height:80px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    border-width: 3px;
+    color:white;
+    text-align:center;
+    background: black;
+    box-shadow: 0 0 5px white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+#start-button:hover{
+ background: gray;
+ width: 90px;
+ height: 90px;
 }
 
 .simon-container .simon-button {
@@ -40,6 +70,14 @@ html {
   font-size: 40px;
   font-family: sans-serif;
 }
+
+.border{
+  border-width: 5px;
+  border-color: gray;
+  box-shadow: 0 0 5px white;
+}
+
+
 
 .simon-button.green {
   background-color: #21BA45;
@@ -80,4 +118,9 @@ html {
 .blue-lit, .blue:active{
   background-color: rgb(151, 209, 243)!important;
   box-shadow: 5px 5px 5px 5px rgb(151, 209, 243);
+}
+
+
+.audio{
+  margin-top: 100px;
 }
