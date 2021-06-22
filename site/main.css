@@ -56,30 +56,28 @@ html {
   border-radius: 10px 10px 10px 200px;
 }
 
-
-
 .simon-button.blue {
   background-color: rgb(0, 0, 255);
   border-radius: 10px 10px 200px 10px;
 }
 
-.green:active{
-  background-color:rgb(136, 255, 112);
+.green-lit, .green:active{
+  background-color:rgb(136, 255, 112)!important;
   box-shadow: 5px 5px 5px 5px rgb(136, 255, 112);
   /*box-shadow: 120px 80px 40px 20px rgb(136, 255, 112);*/
 }
 
-.red:active{
-  background-color: rgb(245, 121, 121);
+.red-lit, .red:active{
+  background-color: rgb(245, 121, 121)!important;
   box-shadow: 5px 5px 5px 5px rgb(245, 121, 121);
 }
 
-.yellow:active{
-  background-color: rgb(248, 227, 132);
+.yellow-lit, .yellow:active{
+  background-color: rgb(248, 227, 132)!important;
   box-shadow: 5px 5px 5px 5px rgb(248, 227, 132);
 }
 
-.blue:active{
-  background-color: rgb(151, 209, 243);
+.blue-lit, .blue:active{
+  background-color: rgb(151, 209, 243)!important;
   box-shadow: 5px 5px 5px 5px rgb(151, 209, 243);
 }
