@@ -24,25 +24,48 @@ greenButton.addEventListener('click', function() {
   audio.play();
 }*/
 
+//boolean variables
+var redOn = false;
+var yellowOn = false;
+var greenOn = false;
+var blueOn = false;
+
+function reset(){
+  redOn = false;
+  yellowOn = false;
+  greenOn = false;
+  blueOn = false;
+}
+
 
 
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
   alert('You clicked the red button');
-/*redButton.addEventListener('mousedown', function(){
-    classList.add('light-up-red');
-redButton.addEventListener('mouseup', function(){
-    classList.remove('light-up-red');*/
+  reset();
+  redOn = true;
 });
-
-
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {
   alert('You clicked the yellow button');
+  reset();
+  yellowOn = true;
 });
 
 let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
   alert('You clicked the blue button');
+  reset();
+  blueOn = true;
 });
+
+let greenButton = document.querySelector('.simon-button.green');
+greenButton.addEventListener('click', function() {
+  alert('You clicked the green button');
+  reset();
+  greenOn = true;
+});
+
+let startButton = document.getElementById('start');
+startButton.addEventListener('click', newGame);

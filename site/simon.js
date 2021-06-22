@@ -4,19 +4,9 @@
  * @author Emily Greetis
  *
  */
-var i = 0; //placeholder for what level the player is on
-function onLoad(){
-  var sequence = [];
-  //active('blue');
- // randomColor();
- sequence = colorSequencer();
- activate(sequence, 0);
-var updateButton = document.querySelector("button");
-updateButton.addEventListener('click', (event) => {
-update(sequence, i + 1, i);
-i++;
-});
-}
+
+//basic setup stuff
+
   /**
    * Calls a random number from
    * 0 to 3
@@ -63,7 +53,7 @@ i++;
     console.log(x);
     return sequence;
   }
-//////////////////////////////////////////
+////////////////////////////////////////// control functions
 /**
  * @param String color name
  * activates specific button
@@ -116,11 +106,85 @@ function activate(colorSequence, idx){
  */
 function update(colorSequence, idx, oldIdx){
   if(idx >= colorSequence.length){
-    return; //implement some kind of you win type thing
+    return; //implement some kind of you win type thing or a boolean to save win
   }
   var oldColor = colorSequence[oldIdx];
   reset(oldColor);
   var newColor = colorSequence[idx];
   console.log(newColor);
   activate(colorSequence, idx);
+}
+
+function clearAll(){
+  reset("green");
+  reset("red");
+  reset("yellow");
+  reset("blue");
+}
+
+/**
+ * @param boolean userInput
+ * the last button the user hit
+ * @param String[] colorSequence
+ * correct sequence of colors
+ * @param int level
+ * @return boolean correct
+ * returns true if user got
+ * this level correct
+ */
+function compare(userInput, colorSequence, level){
+  if (userInput === colorSequence[level]){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function currentButton(){
+  if (redOn === true){
+    return "red";
+  }
+  if (yellowOn === true){
+    return "yellow";
+  }
+  if (greenOn === true){
+    return "green";
+  }
+  if (blueOn === true){
+    return "blue";
+  } else {
+    return null;
+  }
+}
+
+/**
+ * @param String[] sequence
+ * @param int idx current level
+ * resets previous calls
+ * activates current button for 1 sec
+ */
+function callCurrent(sequence, idx){
+  const timer = setInterval(function(){
+    activate(sequence, idx++);
+    clearAll();
+  }, 1000);
+  if (idx >= sequence.length){
+    clearInterval(timer);
+  }
+}
+
+/////////// gameplay
+
+var level = 0; //placeholder for what level the player is on
+var sequence = []; //placeholder for color sequence
+
+function onLoad(){
+var clicked = currentButton();
+console.log(clicked);
+}
+
+function newGame(){
+clearAll();
+sequence = colorSequencer();
+callCurrent(sequence, level);
 }
